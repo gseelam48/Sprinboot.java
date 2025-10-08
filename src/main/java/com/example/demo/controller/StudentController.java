@@ -13,7 +13,7 @@ import java.net.URI;
 import java.util.List;
 
 @Tag(name = "Student CRUD API", description = "API for managing users")
-@RestController
+@RestController// @controller +@
 @RequestMapping("/api/students")
 public class StudentController {
 
@@ -101,47 +101,4 @@ public class StudentController {
         return ResponseEntity.ok(students);
     }
 }
-/*@RestController
-@RequestMapping("/student")
-public class StudentController {
-
-    @Autowired
-    StudentRepository studentRepository;
-
-    @PostMapping("/saveStudent")
-    public ResponseEntity saveStudent(@RequestBody StudentDto studentDto) {
-        Student student = new Student();
-        student.setName(studentDto.getName());
-        student.setAddress(studentDto.getAddress());
-        studentRepository.save(student);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Student created successfully");
-    }
-
-    @GetMapping("/getStudents")
-    public Iterable<Student> getStudent() {
-        return studentRepository.findAll();
-    }
-
-    @GetMapping("/getById")
-    public Student getStudentById(@RequestParam Long id) {
-        return studentRepository.findById(id).orElse(null);
-    }
-
-    @GetMapping("/getByName")
-    public Student getStudentByName(@RequestParam String name) {
-        return studentRepository.findByName(name);
-    }
-
-    @DeleteMapping("/getById")
-    public ResponseEntity deleteStudentById(@RequestParam Long id) {
-        studentRepository.deleteById(id);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-    }
-
-    @PutMapping("/update")
-    public Student updateStudentData(@RequestBody Student student) {
-        return studentRepository.save(student);
-    }
-}*/
-
 
