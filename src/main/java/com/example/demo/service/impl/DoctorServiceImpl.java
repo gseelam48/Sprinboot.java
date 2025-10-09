@@ -30,4 +30,11 @@ public class DoctorServiceImpl implements DoctorService {
         Doctor saved = doctorRepository.save(doctor);
         return mapToDto(saved);
     }
+
+    @Override
+    public DoctorDto getDoctorById(Long id) {
+       Doctor doctor = doctorRepository.findById(id)
+               .orElseThrow(()->new RuntimeException("student not found"));
+       return mapToDto(doctor);
+    }
 }
