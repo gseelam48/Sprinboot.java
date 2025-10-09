@@ -6,11 +6,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class Dog implements Animal {
 
-      @Override
+    @Override
     public void bark() {
-          System.out.println(" dog is barking ");
+        System.out.println(" dog is barking ");
     }
-    public void eat(){
+
+    @Override
+    public void eat() {
         System.out.println(" dog is eating ");
     }
 }
