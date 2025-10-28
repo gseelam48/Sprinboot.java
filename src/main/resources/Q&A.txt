@@ -1,0 +1,33 @@
+1. About method Overloading and method overriding in java?
+2. About @Autowired and what are its alternatives ?
+3. how inheritance work in a try catch block?
+4. about throwable in java?
+5. about static key word?
+6. about final key word ?
+7. about singleton class?
+8. how do you create singleton class in java?
+9. about marker interface and what is a functional interface?
+10. if we have a method in both the superclass and  subclass what happens if we later change the methods return type?
+11. about pass by values vs pass by reference?
+12. about static block?
+13. if we have static block in different class and main method is calling it from another class then what will execute?
+14. about callable and runnable?
+15. primary annotation and when should it be used?
+16. how do you config multiple database in your project?
+17. explain how you built module from scratch?
+18. What security Parameters do you check in your application?
+19. why do you reuse the spring architecture template?
+20. explain my project architecture?
+21. how would you create a custom repo in spring data JPA?
+22. about my current tech stack and why did i use spring JDBC instead of hibernate?
+23. about the size of an arraylist ? if its dynamic what is its intial capacity or limit?
+24. what DSA / collection type do you use in your current project?
+25. explain the internal working of hashmap prior to java8 and after java8?
+26. How will you config multiple database from scratch in a spring boot application?
+27. how does singleton work in a multithreaded environment? if you use the synchronized keyword, where should it be added on the class, method  or variable?
+28. How a Payment gateway system work?
+29. Difference between @Controller and @restcontroller in spring?
+30, how will you return XML instead of JSON from a springBoot RestAPI?
+31. About an interceptor and How is it used in springBoot?
+32. How do you implement Logging across the entire application without writing a logging statement in each method in the controller and DAO Layers?
+
