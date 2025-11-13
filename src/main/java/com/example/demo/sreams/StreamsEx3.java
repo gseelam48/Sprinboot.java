@@ -7,6 +7,13 @@ public class StreamsEx3 {
     public static void main(String[] args) {
 
         List<Integer> numbers = Arrays.asList(1, 22, 45, 78, 8765, 122, 87565);
+        int count = numbers.size();
+        int count1 = 0;
+        for (Integer num : numbers) {
+            count1++;
+            ;
+        }
+        System.out.println("number of elements" + count1);
         List<Integer> list1 = Arrays.asList(1, 2, 3, 4, 5);
         List<Integer> list2 = Arrays.asList(3, 4, 5, 6, 7);
         List<Integer> numbersWithDuplicates = Arrays.asList(1, 2, 3, 2, 4, 1, 5, 6, 5);
@@ -17,10 +24,7 @@ public class StreamsEx3 {
                 new Transaction("2022-01-02", 900),
                 new Transaction("2022-01-03", 500)
         );
-        transactions = transactions.stream()
-                .sorted(Comparator.comparing(Transaction::getAmount).reversed())
-                .toList();
-
+        transactions = transactions.stream().sorted(Comparator.comparing(transaction -> transaction.getAmount())).toList();
         for (Transaction t : transactions) {
             System.out.println(t.getDate() + "  " + t.getAmount());
         }

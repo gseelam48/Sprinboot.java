@@ -28,8 +28,9 @@ public class StudentServiceImpl implements StudentService {
         studentDto.setAddress(student.getAddress());
         studentDto.setPhoneNumber(student.getPhoneNumber());
         studentDto.setEmail(student.getEmail());
+        studentDto.setPassword(student.getPassword());
         //  return studentDto;
-        return new StudentDto(student.getId(), student.getName(), student.getAddress(), student.getPhoneNumber(), student.getEmail());
+        return new StudentDto(student.getId(), student.getName(), student.getAddress(), student.getPhoneNumber(), student.getEmail(), student.getPassword());
     }
 
     private Student mapToEntity(StudentDto dto) {
@@ -39,6 +40,7 @@ public class StudentServiceImpl implements StudentService {
         student.setAddress(dto.getAddress());
         student.setPhoneNumber(dto.getPhoneNumber());
         student.setEmail(dto.getEmail());
+        student.setPassword(dto.getPassword());
         return student;
         //   return new Student(dto.getName(), dto.getAddress());
     }

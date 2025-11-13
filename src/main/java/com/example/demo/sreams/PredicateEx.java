@@ -2,7 +2,10 @@ package com.example.demo.sreams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class PredicateEx {
@@ -15,12 +18,12 @@ public class PredicateEx {
         System.out.println(filterNumbers(5, numbers));
         System.out.println(filterByLetters("a",fruits));
         System.out.println(filterByLetters1("a",fruits));
+
     }
 
     static Predicate<Integer> isEvenPredicate() {
         return n -> n % 3 == 0;
     }
-
     static Long filterNumbers(int number, List<Integer> numbers) {
         Predicate<Integer> dividedByNumber = n -> n % number == 0;
         return numbers.stream().filter(dividedByNumber).count();

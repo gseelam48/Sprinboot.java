@@ -7,8 +7,12 @@ import java.util.List;
 public class StreamsEx5 {
     public static void main(String[] args) {
 
-        List<Integer> numbers = Arrays.asList(2, 8, 7, 6, 4);
+        List<Integer> numbers = Arrays.asList(2, 8, 7, 6, 4, 9, 18, 27);
+        List<Integer> skip = numbers.stream().skip(3).toList();
         Long greaterThanThree = numbers.stream().filter(num -> num > 3).count();
+        Long greaterThanThree1 = numbers.stream().filter(num -> num > 3).filter(num -> num % 3 == 0).filter(num -> num % 2 == 0).count();
+        System.out.println(" Count of numbers divisible by 3 and divisible by 2  : " + greaterThanThree1);
+        System.out.println(" Count of numbers divisible by 3 is : " + greaterThanThree1);
         List<Integer> sortBy = numbers.stream().sorted().toList();
         System.out.println("----SortByNumbers-----");
         for (Integer num : sortBy) {
